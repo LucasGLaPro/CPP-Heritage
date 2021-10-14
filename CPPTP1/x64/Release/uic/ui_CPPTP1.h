@@ -12,12 +12,15 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -36,6 +39,10 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
+    QLabel *label_5;
+    QLineEdit *lineEdit;
+    QPushButton *pushButton_4;
+    QTableWidget *tableWidget;
     QMenuBar *menuBar;
     QMenu *menuChoirsir;
     QToolBar *mainToolBar;
@@ -75,6 +82,18 @@ public:
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(110, 240, 91, 16));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(240, 160, 91, 16));
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(220, 180, 113, 20));
+        pushButton_4 = new QPushButton(centralWidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(240, 220, 75, 23));
+        tableWidget = new QTableWidget(centralWidget);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setGeometry(QRect(345, 21, 241, 191));
         CPPTP1Class->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(CPPTP1Class);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -99,6 +118,7 @@ public:
         QObject::connect(pushButton_2, SIGNAL(clicked()), CPPTP1Class, SLOT(remise()));
         QObject::connect(actiondehisto, SIGNAL(triggered()), CPPTP1Class, SLOT(denormal()));
         QObject::connect(actionde, SIGNAL(triggered()), CPPTP1Class, SLOT(dehisto()));
+        QObject::connect(pushButton_4, SIGNAL(clicked()), CPPTP1Class, SLOT(tiredehisto()));
 
         QMetaObject::connectSlotsByName(CPPTP1Class);
     } // setupUi
@@ -115,6 +135,8 @@ public:
         label_2->setText(QString());
         label_3->setText(QCoreApplication::translate("CPPTP1Class", "Nombre", nullptr));
         label_4->setText(QCoreApplication::translate("CPPTP1Class", "Nombre final", nullptr));
+        label_5->setText(QCoreApplication::translate("CPPTP1Class", "Nombred de jet", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("CPPTP1Class", "Lancer le d\303\251", nullptr));
         menuChoirsir->setTitle(QCoreApplication::translate("CPPTP1Class", "Choisir", nullptr));
     } // retranslateUi
 
