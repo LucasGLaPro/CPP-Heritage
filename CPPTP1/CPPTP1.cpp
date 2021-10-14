@@ -71,10 +71,23 @@ void CPPTP1::nombretotal(){
 void CPPTP1::tiredehisto() {
 	int tab[7];
 	QString tirenombre = ui.lineEdit->text();
-	qDebug() << tirenombre;
-	for (int i = 0; i < tirenombre.toInt(); i++) {
-		qDebug() << this->dehisto->tireplusieur();
-		ui.tableWidget->setItem(i, 5, new QTableWidgetItem(5));
+	if(tirenombre.toInt() > 7){
+		qDebug() << "la c'est trop fero";
 	}
+	else {
+		qDebug() << tirenombre;
+		ui.tableWidget->setRowCount(7);
+		ui.tableWidget->setColumnCount(1);
+		for (int i = 0; i < tirenombre.toInt(); i++) {
+			//qDebug() << this->dehisto->tireplusieur();
+			for (int j = 0; j < 1; j++) 
+			{
+				int nbr = this->dehisto->tireplusieur();
+				auto data = new QTableWidgetItem(QString::number(nbr));
+				ui.tableWidget->setItem(i, j, data);
+			}
+		}
+	}
+
 	
 }

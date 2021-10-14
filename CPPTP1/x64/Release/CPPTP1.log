@@ -1,0 +1,10 @@
+﻿  rcc CPPTP1.qrc
+  moc CPPTP1.h
+   RCC: Warning: No resources in 'C:\Users\Lucas G\source\repos\CPPTP1\CPPTP1\CPPTP1.qrc'.
+  CPPTP1.cpp
+  dehisto.cpp
+  dé.cpp
+  main.cpp
+  qrc_CPPTP1.cpp
+  moc_CPPTP1.cpp
+  CPPTP1.vcxproj -> C:\Users\Lucas G\source\repos\CPPTP1\x64\Release\CPPTP1.exe

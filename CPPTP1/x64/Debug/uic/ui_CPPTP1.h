@@ -93,7 +93,7 @@ public:
         pushButton_4->setGeometry(QRect(240, 220, 75, 23));
         tableWidget = new QTableWidget(centralWidget);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(345, 21, 241, 191));
+        tableWidget->setGeometry(QRect(345, 21, 121, 191));
         CPPTP1Class->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(CPPTP1Class);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
