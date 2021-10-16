@@ -71,8 +71,9 @@ void CPPTP1::nombretotal(){
 void CPPTP1::tiredehisto() {
 	int tab[7];
 	QString tirenombre = ui.lineEdit->text();
+	ui.tableWidget->clear();
 	if(tirenombre.toInt() > 7){
-		qDebug() << "la c'est trop fero";
+		qDebug() << "la c'est un peut trop fero";
 	}
 	else {
 		qDebug() << tirenombre;
