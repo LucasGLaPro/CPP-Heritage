@@ -11,6 +11,7 @@ class CPPTP1 : public QMainWindow
 {
 	Q_OBJECT
 	int nombrefinal = 0;
+	int nombre = 0;
 
 public:
     CPPTP1(QWidget *parent = Q_NULLPTR);

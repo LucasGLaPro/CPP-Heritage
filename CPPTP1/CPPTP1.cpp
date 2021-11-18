@@ -33,7 +33,6 @@ void CPPTP1::denormal() {
 	ui.label_5->setVisible(true);
 	ui.lineEdit->setVisible(true);
 	ui.pushButton_4->setVisible(true);
-	//ui.tableWidget->setItem(1, 1, new QTableWidgetItem("Hello"));
 }
 void CPPTP1::dehistorique() {
 	ui.label->setVisible(true);
@@ -50,13 +49,17 @@ void CPPTP1::dehistorique() {
 }
 
 void CPPTP1::tire() {
-	
+	//(*de)++;
+	affichenombre();
 	ui.label->setText(QString::number(this->de->dd()));
 	nombretotal();
 }
 
 void CPPTP1::affichenombre() {
-	ui.label->setText(QString::number(this->de->affichenombre()));
+	this->nombre += (*de);
+
+	QString Qscore = QString::number(this->nombre);
+	ui.label->setText(Qscore);
 	nombretotal();
 }
 void CPPTP1::remise() {
@@ -71,14 +74,14 @@ void CPPTP1::nombretotal(){
 void CPPTP1::tiredehisto() {
 	int tab[7];
 	QString tirenombre = ui.lineEdit->text();
-	ui.tableWidget->clear();
 	if(tirenombre.toInt() > 7){
-		qDebug() << "la c'est un peut trop fero";
+		qDebug() << "Trop de nombre, 7 max";
 	}
 	else {
 		qDebug() << tirenombre;
 		ui.tableWidget->setRowCount(7);
 		ui.tableWidget->setColumnCount(1);
+		ui.tableWidget->clear();
 		for (int i = 0; i < tirenombre.toInt(); i++) {
 			//qDebug() << this->dehisto->tireplusieur();
 			for (int j = 0; j < 1; j++) 

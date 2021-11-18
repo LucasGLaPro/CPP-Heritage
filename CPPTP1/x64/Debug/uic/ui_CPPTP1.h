@@ -117,7 +117,7 @@ public:
         QObject::connect(pushButton_3, SIGNAL(clicked()), CPPTP1Class, SLOT(affichenombre()));
         QObject::connect(pushButton_2, SIGNAL(clicked()), CPPTP1Class, SLOT(remise()));
         QObject::connect(actiondehisto, SIGNAL(triggered()), CPPTP1Class, SLOT(denormal()));
-        QObject::connect(actionde, SIGNAL(triggered()), CPPTP1Class, SLOT(dehisto()));
+        QObject::connect(actionde, SIGNAL(triggered()), CPPTP1Class, SLOT(dehistorique()));
         QObject::connect(pushButton_4, SIGNAL(clicked()), CPPTP1Class, SLOT(tiredehisto()));
 
         QMetaObject::connectSlotsByName(CPPTP1Class);

@@ -269,7 +269,7 @@
    <sender>actionde</sender>
    <signal>triggered()</signal>
    <receiver>CPPTP1Class</receiver>
-   <slot>dehisto()</slot>
+   <slot>dehistorique()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
