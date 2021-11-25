@@ -26,6 +26,6 @@ dé dé::operator++(int AAAAA)
 void operator+=(int &n, dé &dd)
 {
 	qDebug() << "Opérateur '+='";
-	n = dd.val;
+	n = dd.nombre;
 
 }

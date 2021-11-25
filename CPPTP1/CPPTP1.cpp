@@ -49,7 +49,7 @@ void CPPTP1::dehistorique() {
 }
 
 void CPPTP1::tire() {
-	//(*de)++;
+	(*de)++;
 	affichenombre();
 	ui.label->setText(QString::number(this->de->dd()));
 	nombretotal();
